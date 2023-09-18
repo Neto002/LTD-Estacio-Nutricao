@@ -10,7 +10,7 @@ export default function Header() {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          LTD-Nutrição
+          Computação / Nutrição
         </a>
         <button
           className="navbar-toggler"
