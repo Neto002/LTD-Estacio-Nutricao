@@ -7,6 +7,7 @@ export default function Header() {
     <nav
       className="navbar navbar-expand-lg sticky-top barra-navegacao"
       data-bs-theme="light"
+      style={{ marginBottom: "1vh" }}
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
