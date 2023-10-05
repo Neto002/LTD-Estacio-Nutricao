@@ -4,380 +4,86 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import DadosCard from "../../components/DadosCard";
 import DadosModal from "../../components/DadosModal";
+import api from "../../services/api";
 import "./style.scss";
 
 export default function Dados() {
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    const pageBody = document.getElementById("pageBody");
-    console.log(modalShow);
-    if (modalShow) {
-      if (pageBody) {
-        pageBody.classList.add("modal-open");
-      }
-    } else {
-      pageBody.classList.remove("modal-open");
+    async function loadDados() {
+      const response = await api.get("dados");
+      console.log(response.data);
+      setData(response.data);
     }
-    // const pageBody = document.getElementById("pageBody");
-    // if (pageBody) {
-    //   pageBody.classList.add("modal-open");
-    // }
-    // return () => {
-    //   if (pageBody) {
-    //     pageBody.classList.remove("modal-open");
-    //   }
-    // };
-  }, [modalShow]);
+    loadDados();
+  }, []);
 
   return (
     <div id="pageBody" className="container">
       <h1>Dados dos Atendimentos</h1>
       <div className="cards">
-        <div className="card-dados">
-          <DadosCard
-            cardTitle="Dia 08/09/21"
-            cardText={
-              "Clique no botão abaixo para visualizar os detalhes do atendimento"
-            }
-            cardBody={
-              <div>
-                <Button variant="info" onClick={() => setModalShow(true)}>
-                  Visualizar
-                </Button>
-                <DadosModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  modalTitle="Realizados três atendimentos"
-                  modalBody={
-                    <>
-                      <ol>
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 36 anos, com hemoglobina glicada
-                            limítrofe de 5,9, sem histórico de patologia
-                            pregressa.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            28,2 kg/m² (Sobrepeso)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Reeducação alimentar e perder peso.
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 59 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            32 kg/m² (Obesidade grau I)
-                          </p>
+        {data.map((atendimento, index) => (
+          <>
+            <div className="card-dados" key={atendimento.date}>
+              <DadosCard
+                cardTitle={atendimento.date}
+                cardText={
+                  "Clique no botão abaixo para visualizar os detalhes do atendimento"
+                }
+                cardBody={
+                  <div>
+                    <Button variant="info" onClick={() => setModalShow(index)}>
+                      Visualizar
+                    </Button>
+                  </div>
+                }
+              />
+            </div>
+            <DadosModal
+              show={modalShow === index}
+              onHide={() => setModalShow(null)}
+              modalTitle={atendimento.date}
+              modalBody={
+                <>
+                  <h4 style={{ whiteSpace: "pre-line" }}>
+                    {atendimento.title}
+                  </h4>
+                  <br />
+                  <ol>
+                    {atendimento.atendimentos.map((infoAtendimentos) => (
+                      <li key={infoAtendimentos.title}>
+                        <h5>{infoAtendimentos.title}</h5>
+                        <p>{infoAtendimentos.description}</p>
+                        <p>
+                          <span>
+                            <strong>IMC:</strong>
+                          </span>{" "}
+                          {infoAtendimentos.imc}
+                        </p>
+                        <p>
+                          <span>
+                            <strong>Objetivo da consulta:</strong>
+                          </span>{" "}
+                          {infoAtendimentos.objective}
+                        </p>
+                        {infoAtendimentos.conduct != null && (
                           <p>
                             <span>
-                              <strong>Objetivo da consulta:</strong>
+                              <strong>Conduta:</strong>
                             </span>{" "}
-                            Perder peso
+                            {infoAtendimentos.conduct}
                           </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 31 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            35 kg/m² (Obesidade grau II)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perda de peso
-                          </p>
-                        </li>
-                      </ol>
-                    </>
-                  }
-                />
-              </div>
-            }
-          />
-        </div>
-        <div className="card-dados">
-          <DadosCard
-            cardTitle="Dia 08/09/21"
-            cardText={
-              "Clique no botão abaixo para visualizar os detalhes do atendimento"
-            }
-            cardBody={
-              <div>
-                <Button variant="info" onClick={() => setModalShow(true)}>
-                  Visualizar
-                </Button>
-                <DadosModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  modalTitle="Realizados três atendimentos"
-                  modalBody={
-                    <>
-                      <ol>
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 36 anos, com hemoglobina glicada
-                            limítrofe de 5,9, sem histórico de patologia
-                            pregressa.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            28,2 kg/m² (Sobrepeso)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Reeducação alimentar e perder peso.
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 59 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            32 kg/m² (Obesidade grau I)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perder peso
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 31 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            35 kg/m² (Obesidade grau II)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perda de peso
-                          </p>
-                        </li>
-                      </ol>
-                    </>
-                  }
-                />
-              </div>
-            }
-          />
-        </div>
-        <div className="card-dados">
-          <DadosCard
-            cardTitle="Dia 08/09/21"
-            cardText={
-              "Clique no botão abaixo para visualizar os detalhes do atendimento"
-            }
-            cardBody={
-              <div>
-                <Button variant="info" onClick={() => setModalShow(true)}>
-                  Visualizar
-                </Button>
-                <DadosModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  modalTitle="Realizados três atendimentos"
-                  modalBody={
-                    <>
-                      <ol>
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 36 anos, com hemoglobina glicada
-                            limítrofe de 5,9, sem histórico de patologia
-                            pregressa.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            28,2 kg/m² (Sobrepeso)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Reeducação alimentar e perder peso.
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 59 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            32 kg/m² (Obesidade grau I)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perder peso
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 31 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            35 kg/m² (Obesidade grau II)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perda de peso
-                          </p>
-                        </li>
-                      </ol>
-                    </>
-                  }
-                />
-              </div>
-            }
-          />
-        </div>
-        <div className="card-dados">
-          <DadosCard
-            cardTitle="Dia 08/09/21"
-            cardText={
-              "Clique no botão abaixo para visualizar os detalhes do atendimento"
-            }
-            cardBody={
-              <div>
-                <Button variant="info" onClick={() => setModalShow(true)}>
-                  Visualizar
-                </Button>
-                <DadosModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  modalTitle="Realizados três atendimentos"
-                  modalBody={
-                    <>
-                      <ol>
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 36 anos, com hemoglobina glicada
-                            limítrofe de 5,9, sem histórico de patologia
-                            pregressa.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            28,2 kg/m² (Sobrepeso)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Reeducação alimentar e perder peso.
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 59 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            32 kg/m² (Obesidade grau I)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perder peso
-                          </p>
-                        </li>
-
-                        <li>
-                          <h5>Paciente</h5>
-                          <p>
-                            Sexo feminino, 31 anos, sem história de patologia
-                            pregressa e atual.
-                          </p>
-                          <p>
-                            <span>
-                              <strong>IMC:</strong>
-                            </span>{" "}
-                            35 kg/m² (Obesidade grau II)
-                          </p>
-                          <p>
-                            <span>
-                              <strong>Objetivo da consulta:</strong>
-                            </span>{" "}
-                            Perda de peso
-                          </p>
-                        </li>
-                      </ol>
-                    </>
-                  }
-                />
-              </div>
-            }
-          />
-        </div>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              }
+            />
+          </>
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,91 @@
+{
+    "dados": [
+        {
+            "date": "Dia 08/09/21",
+            "title": "Realizados três atendimentos",
+            "atendimentos": [
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 36 anos, com hemoglobina glicada limítrofe de 5,9, sem histórico de patologia pregressa.",
+                    "imc": "28,2 kg/m² (Sobrepeso)",
+                    "objective": "Reeducação alimentar e perder peso.",
+                    "conduct": null
+                },
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 59 anos, sem história de patologia pregressa e atual.",
+                    "imc": "32 kg/m² (Obesidade grau I)",
+                    "objective": "Perder peso",
+                    "conduct": null
+                },
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 31 anos, sem história de patologia pregressa e atual.",
+                    "imc": "35 kg/m² (Obesidade grau II)",
+                    "objective": "Perda de peso",
+                    "conduct": null
+                }
+            ]
+        },
+        {
+            "date": "Dia: 15/09/21",
+            "title": "Realizados dois atendimentos",
+            "atendimentos": [
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 61 anos, hipertensa, fazendo uso de medicamentos hipertensivos há 7 anos.",
+                    "imc": "28,55 kg/m² (Sobrepeso)",
+                    "objective": "Perder peso.",
+                    "conduct": "A mesma recebeu orientações e folhetos informativos específicos para hipertensos e orientamos qualitativamente como deve ser sua alimentação."
+                },
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 32 anos, sem história de patologia pregressa e atual, desejava perder peso.",
+                    "imc": "31,8 kg/m² (Obesidade grau I)",
+                    "objective": "Perder peso",
+                    "conduct": "Foram feitas orientações qualitativas para reeducação alimentar. Reagendamos as duas pacientes para retorno daqui a 15 dias."
+                }
+            ]
+        },
+        {
+            "date": "Dia: 22/09/21",
+            "title": "Realizamos uma reunião com a coordenadora do Curso de Nutrição, para organizar os materiais (folder, panfletos...) para serem distribuídos na instituição com intuito de promover a educação alimentar e nutricional.\n\nRealizamos dois atendimentos, uma paciente primeira vez e outro retorno.",
+            "atendimentos": [
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 61 anos, hipertensa, fazendo uso de medicamentos hipertensivos há 7 anos.",
+                    "imc": "28,55 kg/m² (Sobrepeso)",
+                    "objective": "Perder peso.",
+                    "conduct": "A mesma recebeu orientações e folhetos informativos específicos para hipertensos e orientamos qualitativamente como deve ser sua alimentação."
+                },
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 32 anos, sem história de patologia pregressa e atual, desejava perder peso.",
+                    "imc": "31,8 kg/m² (Obesidade grau I)",
+                    "objective": "Perder peso",
+                    "conduct": "Foram feitas orientações qualitativas para reeducação alimentar. Reagendamos as duas pacientes para retorno daqui a 15 dias."
+                }
+            ]
+        },
+        {
+            "date": "Dia: 29/09/21",
+            "title": "Realizados três atendimentos, uma delas retorno para entrega do plano alimentar entregue seu plano alimentar.",
+            "atendimentos": [
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 54 anos, hipertensa diagnosticada há 4 anos, faz uso de hipertensivo.",
+                    "imc": "31 kg/m² (Obesidade grau I)",
+                    "objective": "Perder peso.",
+                    "conduct": null
+                },
+                {
+                    "title": "Paciente",
+                    "description": "Sexo feminino, 92 anos, com hipertensão e tendência a entupimento de carótida.",
+                    "imc": "23,76 kg/m² (eutrofia)",
+                    "objective": "Adequações nutricionais",
+                    "conduct": "Foram realizadas orientações qualitativas para hipertensão, constipação e baixo teor de lipídios."
+                }
+            ]
+        }
+    ]
+}
