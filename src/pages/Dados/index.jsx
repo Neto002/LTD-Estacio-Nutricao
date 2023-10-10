@@ -13,9 +13,16 @@ export default function Dados() {
 
   useEffect(() => {
     async function loadDados() {
-      const response = await api.get("dados");
-      console.log(response.data);
-      setData(response.data);
+      return await api
+        .get("dados")
+        .then((response) => {
+          console.log(response.data);
+          setData(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+          setData([]);
+        });
     }
     loadDados();
   }, []);
@@ -24,10 +31,10 @@ export default function Dados() {
     <div id="pageBody" className="container">
       <h1>Dados dos Atendimentos</h1>
       <div className="cards">
-        {data == [] && <h2>Carregando dados dos atendimentos</h2>}
+        {data.length < 1 && <p>Carregando dados dos atendimentos...</p>}
         {data.map((atendimento, index) => (
-          <>
-            <div className="card-dados" key={atendimento.date}>
+          <div key={atendimento.date}>
+            <div className="card-dados">
               <DadosCard
                 cardTitle={atendimento.date}
                 cardText={
@@ -54,7 +61,7 @@ export default function Dados() {
                   <br />
                   <ol>
                     {atendimento.atendimentos.map((infoAtendimentos) => (
-                      <li key={infoAtendimentos.title}>
+                      <li key={infoAtendimentos.description}>
                         <h5>{infoAtendimentos.title}</h5>
                         <p>{infoAtendimentos.description}</p>
                         <p>
@@ -83,7 +90,7 @@ export default function Dados() {
                 </>
               }
             />
-          </>
+          </div>
         ))}
       </div>
     </div>
