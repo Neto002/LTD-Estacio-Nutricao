@@ -24,6 +24,7 @@ export default function Dados() {
     <div id="pageBody" className="container">
       <h1>Dados dos Atendimentos</h1>
       <div className="cards">
+        {data == [] && <h2>Carregando dados dos atendimentos</h2>}
         {data.map((atendimento, index) => (
           <>
             <div className="card-dados" key={atendimento.date}>
