@@ -1,10 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
+import image1 from "../../assets/carroussel/cImage1.jpeg";
+import image2 from "../../assets/carroussel/cImage2.jpeg";
+import image3 from "../../assets/carroussel/cImage3.jpeg";
 import "./style.scss";
-
-import hamburguer from "../../assets/hamburguer.jpeg";
-import massas from "../../assets/massas.jpeg";
-import pratos from "../../assets/pratos.jpeg";
 
 export default function Carousel() {
   return (
@@ -16,21 +15,21 @@ export default function Carousel() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src={hamburguer}
+            src={image1}
             className="d-block w-100 carrossel"
             alt="Primeira imagem"
           />
         </div>
         <div className="carousel-item">
           <img
-            src={massas}
+            src={image2}
             className="d-block w-100 carrossel"
             alt="Segunda imagem"
           />
         </div>
         <div className="carousel-item">
           <img
-            src={pratos}
+            src={image3}
             className="d-block w-100 carrossel"
             alt="Terceira Imagem"
           />
