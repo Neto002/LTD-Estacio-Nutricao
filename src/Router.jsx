@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import CalendarioColorido from "./pages/CalendarioColorido";
 import Dados from "./pages/Dados";
 
 export default function Router() {
@@ -20,6 +21,7 @@ export default function Router() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dados" element={<Dados />} />
+        <Route path="/calendario-colorido" element={<CalendarioColorido />} />
       </Routes>
       <Footer />
     </>

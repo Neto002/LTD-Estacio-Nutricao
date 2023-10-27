@@ -2,6 +2,16 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 
 .barra-navegacao {
-  background-color: #a1edaf;
+  background-color: #70c47f;
   box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
 }
+
+.item:hover {
+  background-color: #a1edaf;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+// #navbarNav li {
+//   min-width: 100px;
+// }
