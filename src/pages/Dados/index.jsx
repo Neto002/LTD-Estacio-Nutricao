@@ -29,8 +29,8 @@ export default function Dados() {
 
   return (
     <div id="pageBody" className="container">
-      <h1>Dados dos Atendimentos</h1>
-      <div className="cards">
+      <h1 className="text-center">Dados dos Atendimentos</h1>
+      <div className="cards d-flex justify-content-center">
         {data.length < 1 && <p>Carregando dados dos atendimentos...</p>}
         {data.map((atendimento, index) => (
           <div key={atendimento.date}>

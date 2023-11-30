@@ -1,0 +1,79 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.prato {
+  width: 100%;
+}
+
+.prato:hover {
+  transition: 0.2s;
+}
+
+#proteinas {
+  // background-color: #00cbed;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 25%;
+  height: 45%;
+  border-top-right-radius: 90%;
+}
+
+#vegetais {
+  //   background-color: #a5e60c;
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  width: 25%;
+  height: 90%;
+  border-radius: 15vw 0 0 15vw;
+}
+
+#carboidratos {
+  //   background-color: #e7a609;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  width: 25%;
+  height: 45%;
+  border-bottom-right-radius: 90%;
+}
+
+.fatia-grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+}
+
+.fatia-proteinas {
+  background-color: #cdf4fb;
+}
+
+.fatia-vegetais {
+  background-color: #ecfbcb;
+}
+
+.fatia-carboidratos {
+  background-color: #fbeecc;
+}
+
+.porcentagem {
+  font-weight: bold;
+}
+
+.proteinas {
+  color: #0ec1d8;
+}
+
+.vegetais {
+  color: #88b102;
+}
+
+.carboidratos {
+  color: #c99109;
+}
