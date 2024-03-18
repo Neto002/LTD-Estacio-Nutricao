@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aa0a8154.css",
-    "main.js": "/static/js/main.7fa5b5ee.js",
+    "main.js": "/static/js/main.48b5d1a9.js",
     "static/js/787.99c086d9.chunk.js": "/static/js/787.99c086d9.chunk.js",
     "static/media/cImage2.jpeg": "/static/media/cImage2.93dea13ad4f3c2a40599.jpeg",
     "static/media/prato_saudavel.png": "/static/media/prato_saudavel.8a43d3f736a5d5c9cfb3.png",
@@ -19,11 +19,11 @@
     "static/media/0.png": "/static/media/0.473eeaccfc6978893d35.png",
     "index.html": "/index.html",
     "main.aa0a8154.css.map": "/static/css/main.aa0a8154.css.map",
-    "main.7fa5b5ee.js.map": "/static/js/main.7fa5b5ee.js.map",
+    "main.48b5d1a9.js.map": "/static/js/main.48b5d1a9.js.map",
     "787.99c086d9.chunk.js.map": "/static/js/787.99c086d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa0a8154.css",
-    "static/js/main.7fa5b5ee.js"
+    "static/js/main.48b5d1a9.js"
   ]
 }
