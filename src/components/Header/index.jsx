@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function Header() {
@@ -11,9 +12,9 @@ export default function Header() {
       style={{ marginBottom: "1vh" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           Computação / Nutrição
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -31,11 +32,11 @@ export default function Header() {
         >
           <ul className="navbar-nav">
             <li className="nav-item item">
-              <a className="nav-link" aria-current="page" href="/">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
-            <li className="nav-item item">
+            {/* <li className="nav-item item">
               <a className="nav-link" href="/combate-tabagismo">
                 Combate ao Tabagismo
               </a>
@@ -49,21 +50,36 @@ export default function Header() {
               <a className="nav-link" href="perfil-pacientes">
                 Perfil de Pacientes
               </a>
-            </li>
+            </li> */}
             <li className="nav-item item">
-              <a className="nav-link" href="dados">
+              <Link className="nav-link" to="/ltd-estacio-nutricao/dados">
                 Dados
-              </a>
+              </Link>
             </li>
             <NavDropdown title="Mais" id="basic-nav-dropdown" className="item">
-              <NavDropdown.Item href="/calendario-colorido">
-                Ações
+              <NavDropdown.Item>
+                <Link
+                  className="text-decoration-none text-black"
+                  to="/ltd-estacio-nutricao/calendario-colorido"
+                >
+                  Ações
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="/dez-passos">
-                Alimentação Saudável
+              <NavDropdown.Item>
+                <Link
+                  className="text-decoration-none text-black"
+                  to="/ltd-estacio-nutricao/dez-passos"
+                >
+                  Alimentação Saudável
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="/prato-saudavel">
-                Prato Saudável
+              <NavDropdown.Item>
+                <Link
+                  className="text-decoration-none text-black"
+                  to="/ltd-estacio-nutricao/prato-saudavel"
+                >
+                  Prato Saudável
+                </Link>
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">

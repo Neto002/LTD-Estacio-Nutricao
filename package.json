@@ -18,6 +18,7 @@
     "sass": "^1.66.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://neto002.github.io/ltd-estacio-nutricao",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

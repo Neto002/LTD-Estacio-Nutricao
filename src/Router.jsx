@@ -18,14 +18,23 @@ export default function Router() {
       <Carousel />
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/dados" element={<Dados />} />
-        <Route path="/calendario-colorido" element={<CalendarioColorido />} />
-        <Route path="/dez-passos" element={<DezPassos />} />
-        <Route path="/prato-saudavel" element={<PratoSaudavel />} />
+        <Route exact path="/" element={<Main />} />
+        <Route path="/ltd-estacio-nutricao/about" element={<About />} />
+        <Route path="/ltd-estacio-nutricao/signin" element={<Signin />} />
+        <Route path="/ltd-estacio-nutricao/signup" element={<Signup />} />
+        <Route path="/ltd-estacio-nutricao/dados" element={<Dados />} />
+        <Route
+          path="/ltd-estacio-nutricao/calendario-colorido"
+          element={<CalendarioColorido />}
+        />
+        <Route
+          path="/ltd-estacio-nutricao/dez-passos"
+          element={<DezPassos />}
+        />
+        <Route
+          path="/ltd-estacio-nutricao/prato-saudavel"
+          element={<PratoSaudavel />}
+        />
       </Routes>
       <Footer />
     </>
