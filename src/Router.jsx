@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import CalendarioColorido from "./pages/CalendarioColorido";
 import Dados from "./pages/Dados";
+import DezPassos from "./pages/DezPassos";
+import PratoSaudavel from "./pages/PratoSaudavel";
 
 export default function Router() {
   return (
@@ -22,6 +24,8 @@ export default function Router() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dados" element={<Dados />} />
         <Route path="/calendario-colorido" element={<CalendarioColorido />} />
+        <Route path="/dez-passos" element={<DezPassos />} />
+        <Route path="/prato-saudavel" element={<PratoSaudavel />} />
       </Routes>
       <Footer />
     </>
