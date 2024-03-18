@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa0a8154.css",
-    "main.js": "/static/js/main.7fa5b5ee.js",
-    "static/js/787.99c086d9.chunk.js": "/static/js/787.99c086d9.chunk.js",
-    "static/media/cImage2.jpeg": "/static/media/cImage2.93dea13ad4f3c2a40599.jpeg",
-    "static/media/prato_saudavel.png": "/static/media/prato_saudavel.8a43d3f736a5d5c9cfb3.png",
-    "static/media/cImage1.jpeg": "/static/media/cImage1.61cfdf21594914f1be35.jpeg",
-    "static/media/cImage3.jpeg": "/static/media/cImage3.75134ed6c741362b50d3.jpeg",
-    "static/media/lacos_campanhas.jpg": "/static/media/lacos_campanhas.03fcca7a016c7b1dcad4.jpg",
-    "static/media/3.png": "/static/media/3.1989efb2ef4022209f41.png",
-    "static/media/9.png": "/static/media/9.0ac91a1409765b4c47ac.png",
-    "static/media/2.png": "/static/media/2.cd020e419cb7d168f7f9.png",
-    "static/media/8.png": "/static/media/8.ffb4948ea069c282cc00.png",
-    "static/media/6.png": "/static/media/6.5c0eb16f23df3907a496.png",
-    "static/media/5.png": "/static/media/5.72b7cfbd190d051c042c.png",
-    "static/media/4.png": "/static/media/4.9b18dd989484925fcfad.png",
-    "static/media/7.png": "/static/media/7.846591b4b8a5e7e52d98.png",
-    "static/media/0.png": "/static/media/0.473eeaccfc6978893d35.png",
-    "index.html": "/index.html",
-    "main.aa0a8154.css.map": "/static/css/main.aa0a8154.css.map",
-    "main.7fa5b5ee.js.map": "/static/js/main.7fa5b5ee.js.map",
-    "787.99c086d9.chunk.js.map": "/static/js/787.99c086d9.chunk.js.map"
+    "main.css": "/ltd-estacio-nutricao/static/css/main.aa0a8154.css",
+    "main.js": "/ltd-estacio-nutricao/static/js/main.0c036dcb.js",
+    "static/js/787.99c086d9.chunk.js": "/ltd-estacio-nutricao/static/js/787.99c086d9.chunk.js",
+    "static/media/cImage2.jpeg": "/ltd-estacio-nutricao/static/media/cImage2.93dea13ad4f3c2a40599.jpeg",
+    "static/media/prato_saudavel.png": "/ltd-estacio-nutricao/static/media/prato_saudavel.8a43d3f736a5d5c9cfb3.png",
+    "static/media/cImage1.jpeg": "/ltd-estacio-nutricao/static/media/cImage1.61cfdf21594914f1be35.jpeg",
+    "static/media/cImage3.jpeg": "/ltd-estacio-nutricao/static/media/cImage3.75134ed6c741362b50d3.jpeg",
+    "static/media/lacos_campanhas.jpg": "/ltd-estacio-nutricao/static/media/lacos_campanhas.03fcca7a016c7b1dcad4.jpg",
+    "static/media/3.png": "/ltd-estacio-nutricao/static/media/3.1989efb2ef4022209f41.png",
+    "static/media/9.png": "/ltd-estacio-nutricao/static/media/9.0ac91a1409765b4c47ac.png",
+    "static/media/2.png": "/ltd-estacio-nutricao/static/media/2.cd020e419cb7d168f7f9.png",
+    "static/media/8.png": "/ltd-estacio-nutricao/static/media/8.ffb4948ea069c282cc00.png",
+    "static/media/6.png": "/ltd-estacio-nutricao/static/media/6.5c0eb16f23df3907a496.png",
+    "static/media/5.png": "/ltd-estacio-nutricao/static/media/5.72b7cfbd190d051c042c.png",
+    "static/media/4.png": "/ltd-estacio-nutricao/static/media/4.9b18dd989484925fcfad.png",
+    "static/media/7.png": "/ltd-estacio-nutricao/static/media/7.846591b4b8a5e7e52d98.png",
+    "static/media/0.png": "/ltd-estacio-nutricao/static/media/0.473eeaccfc6978893d35.png",
+    "index.html": "/ltd-estacio-nutricao/index.html",
+    "main.aa0a8154.css.map": "/ltd-estacio-nutricao/static/css/main.aa0a8154.css.map",
+    "main.0c036dcb.js.map": "/ltd-estacio-nutricao/static/js/main.0c036dcb.js.map",
+    "787.99c086d9.chunk.js.map": "/ltd-estacio-nutricao/static/js/787.99c086d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa0a8154.css",
-    "static/js/main.7fa5b5ee.js"
+    "static/js/main.0c036dcb.js"
   ]
 }
