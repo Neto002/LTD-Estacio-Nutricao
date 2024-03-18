@@ -18,7 +18,7 @@ export default function Router() {
       <Carousel />
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/ltd-estacio-nutricao" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
